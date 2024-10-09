@@ -1,0 +1,57 @@
+<button (click)="crearTransaccion()">Crear</button>
+<table>
+  <thead>
+    <tr>
+      <th>
+        Monto
+      </th>
+      <th>
+        Motivo
+      </th>
+      <th>
+        Acciones
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (transacciones of transacciones; track $index){
+      <tr>
+        <td>
+          {{transacciones.Monto}}
+        </td>
+        <td>
+          {{transacciones.Motivo}}
+        </td>
+        <td>
+          <button (click)="eliminarTransaccion($index)">eliminar</button>
+          <button (click)="actualizarTransaccion(transacciones,$index)">editar</button>
+        </td>
+      </tr>
+     } @empty {
+        <tr>No Hay Datos</tr>
+      }
+    
+  </tbody>
+</table>
+
+@if(formTransaccion){
+  <form [formGroup]="formTransaccion">
+    <label for="Monto">Monto</label>
+    <input formControlName="Monto" type="number" id="Monto">
+    <label for="Motivo">Motivo</label>
+    <textarea formControlName="Motivo" id="Motivo"></textarea>
+    <label for="tipo">Tipo</label>
+    <select formControlName="id_tipo_transaccion" id="tipo">
+      <option [value]="null">Seleccione Un Tipo</option>
+      @for (item of tipotransacciones; track $index){
+        <option [value]="item.id">{{item.TipoTransaccion}}</option>
+      }
+    </select>
+    <label for="fecha">Fecha</label>
+    <input formControlName="fecha" type="text" id="fecha">
+    <button (click)="guardarTransaccion()">Guardar</button>
+    <button (click)="cancelarTransaccion()">Eliminar</button>
+  </form>
+}
+
+
