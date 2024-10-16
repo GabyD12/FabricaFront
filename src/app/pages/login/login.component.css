@@ -1,0 +1,47 @@
+section {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Si deseas mantener el color de fondo, pero puedes eliminarlo */
+    background-image: url('https://img.freepik.com/foto-gratis/hermoso-paisaje-madre-naturaleza_23-2148992406.jpg?t=st=1729085490~exp=1729089090~hmac=c4c6c43d85d0c56b479bec027a86f1bebc20db3b335b3e1f06244f555124ad1f&w=1380'); /* Agrega la imagen de fondo */
+    background-size: cover; /* Asegúrate de que la imagen cubra todo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repite la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    opacity: 0.8;
+}
+
+.login-container {
+    background-color: white; /* Mantiene el fondo blanco del contenedor */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}

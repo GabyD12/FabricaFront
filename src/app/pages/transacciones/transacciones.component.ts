@@ -1,8 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { compileClassMetadata } from '@angular/compiler';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
 import { CreateTransaccionDto } from '@shared/dto/create-transaccion-dto';
 import { UpdateTransaccionDto } from '@shared/dto/update-transaccion-dto ';
 import { TipoTransaccionModel } from '@shared/models/tipo-transaccion-model';
@@ -11,16 +9,14 @@ import { TipoTransaccionService } from '@shared/services/tipo-transaccion.servic
 import { TransaccionService } from '@shared/services/transaccion.service';
 import { forkJoin } from 'rxjs';
 
-
 @Component({
-  selector: 'app-root',
+  selector: 'app-transacciones',
   standalone: true,
-  imports: [RouterOutlet,CommonModule,FormsModule,ReactiveFormsModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [CommonModule,FormsModule,ReactiveFormsModule],
+  templateUrl: './transacciones.component.html',
+  styleUrl: './transacciones.component.css'
 })
-export class AppComponent implements OnInit {
-
+export class TransaccionesComponent {
   ngOnInit(): void {
     this.getData();
   }  

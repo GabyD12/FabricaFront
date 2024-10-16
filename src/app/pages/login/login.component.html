@@ -1,0 +1,16 @@
+<section>
+
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+       <form (submit)="login()">
+            <label for="username">Usuario:</label>
+            <input [(ngModel)]="email" type="text" id="username" name="username" required placeholder="Gabriela Diaz">
+            
+            <label for="password">Contraseña:</label>
+            <input [(ngModel)]="password" type="password" id="password" name="password" required placeholder="**********">
+            
+            <input  type="submit" value="Iniciar Sesión">
+            </form>
+    </div>
+
+</section>
